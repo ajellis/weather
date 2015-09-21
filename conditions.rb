@@ -20,7 +20,7 @@ attr_accessor :location, :temperature, :observation
     @response["current_observation"]["temperature_string"]
   end
 
-  def observation
+  def forecast
     @response["current_observation"]["weather"]
   end
 

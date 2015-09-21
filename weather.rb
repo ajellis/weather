@@ -9,5 +9,5 @@ input = Conditions.new(gets.chomp)
 puts "==============================="
 puts "your location is #{input.location}"
 puts "The current temperature is #{input.temperature}"
-puts "the current forecast is #{input.observation}"
+puts "the current forecast is #{input.forecast}"
 puts "==============================="
