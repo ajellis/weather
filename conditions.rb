@@ -24,6 +24,15 @@ attr_accessor :location, :temperature, :observation
     @response["current_observation"]["weather"]
   end
 
+  def wind_dir
+    @response["current_observation"]["wind_dir"]
+  end
+
+  def wind_speed
+    @response["current_observation"]["wind_mph"]
+  end
+
+
   private def get_response
       key = ENV['WUNDERGROUND_KEY']
       HTTParty.get("http://api.wunderground.com/api/#{key}/conditions/q/#{@zip}.json")
