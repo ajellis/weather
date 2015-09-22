@@ -3,6 +3,8 @@ require 'json'
 require './conditions.rb'
 # require './days_forecast.rb'
 require './sun.rb'
+require './alerts.rb'
+require './hurricane.rb'
 
 
 
@@ -18,11 +20,23 @@ puts "The current temperature is #{conditions.temperature}"
 puts "the current forecast is #{conditions.forecast}"
 puts "The wind is blowing #{conditions.wind_dir}, at a speed of #{conditions.wind_speed} MPH"
 puts "==============================="
+sun = Sun.new(input)
+puts "---: Sunrise/Sunset :---"
+puts "Sunrise is at #{sun.sunrise_hour}:#{sun.sunrise_minute}"
+puts "Sunset is at #{sun.sunset_hour}:#{sun.sunset_minute}"
+puts "==============================="
+alerts = Alerts.new(input)
+puts "---: Weather Alerts :---"
+puts "Your current weather alerts are #{alerts.alerts} "
+puts "==============================="
+hurricane = Hurricane.new
+puts "---: Hurricanes :---"
+puts "Name: #{hurricane.name}"
+
+
+
+
 # forecast = DaysForecast.new(input)
 # puts "---: 10-Day Forecast:---"
 # puts "Your ten day forecast is as follows: \n #{ten_days_cast.ten_day}"
 # forecast = DaysForecast.new(input)
-sun = Sun.new(input)
-puts "---: Sunrise/Sunset:---"
-puts "Sunrise is at #{sun.sunrise_hour}:#{sun.sunrise_minute}"
-puts "Sunset is at #{sun.sunset_hour}:#{sun.sunset_minute}"
