@@ -1,7 +1,6 @@
 require 'httparty'
 require 'byebug'
 class Conditions
-attr_accessor :location, :temperature, :observation
   def initialize(zip)
     @zip = zip
     @response = get_response
