@@ -7,7 +7,15 @@ class Alerts
   end
 
   def alerts
-    @response["alerts"]
+    if @response["alerts"] == []
+      "There are no weather alerts in your area."
+    else
+      all_alerts = ""
+      @response["alerts"].each do |a|
+        all_alerts << a["type"] + "\n"
+      end
+      all_alerts
+    end
   end
 
 

@@ -27,13 +27,11 @@ puts "Sunset is at #{sun.sunset_hour}:#{sun.sunset_minute}"
 puts "==============================="
 alerts = Alerts.new(input)
 puts "---: Weather Alerts :---"
-puts "Your current weather alerts are #{alerts.alerts} "
+puts "Your current weather alerts are: #{alerts.alerts} "
 puts "==============================="
-hurricane = Hurricane.new
-puts "---: Hurricanes :---"
-puts "Name: #{hurricane.name}"
-
-
+# hurricane = Hurricane.new
+# puts "---: Hurricanes :---"
+# puts "Name: #{hurricane.name}"
 
 
 # forecast = DaysForecast.new(input)
